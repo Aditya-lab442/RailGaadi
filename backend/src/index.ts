@@ -7,8 +7,9 @@ import { resolve } from 'path';
 import fs from 'fs';
 
 // Load environment variables from backend/.env or .env
-const envPath = resolve(process.cwd(), 'backend/.env');
-dotenv.config({ path: fs.existsSync(envPath) ? envPath : resolve(process.cwd(), '.env') });
+// const envPath = resolve(process.cwd(), 'backend/.env');
+// dotenv.config({ path: fs.existsSync(envPath) ? envPath : resolve(process.cwd(), '.env') });
+dotenv.config();
 
 import searchRoutes from './routes/search';
 import trainRoutes from './routes/train';
